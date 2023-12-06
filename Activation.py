@@ -10,5 +10,5 @@ class Activation:
         return self.activation(input)
 
     def backward(self, output_grad):
-        x = output_grad*self.activation_der(self.input)
-        return np.array([np.mean(x, 0)])
+        return output_grad*self.activation_der(self.input)
+
